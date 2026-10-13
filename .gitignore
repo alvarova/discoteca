@@ -1,0 +1,13 @@
+# Media catalog and temporary operator uploads
+discoteca/
+
+# Runtime and local backups
+*.bak-*
+backup/
+digital/
+live/
+youtubedown/
+
+# Legacy external tools and generated files
+Thumbs.db
+*.log
