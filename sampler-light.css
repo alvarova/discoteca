@@ -1,0 +1,55 @@
+/* Sampler FX: tema claro alineado con la home (data-theme="light" en <html>).
+   El tema oscuro sigue siendo el de sampler-theme.css. */
+.bar{grid-template-columns:76px 296px 132px 128px 126px minmax(260px,1fr) 274px 118px !important}
+.theme-button{height:68px;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:0 14px;border:1px solid var(--fx-border);border-radius:9px;background:linear-gradient(145deg,#1d3043,#142231);color:var(--fx-text);font:inherit;font-size:15px;font-weight:700;cursor:pointer}
+.theme-button:hover{border-color:var(--fx-cyan)}
+.theme-switch{width:32px;height:19px;border-radius:99px;background:#52616a;position:relative;display:inline-block;flex:none}
+.theme-switch:after{content:"";position:absolute;width:15px;height:15px;top:2px;right:2px;border-radius:50%;background:#fff;box-shadow:0 1px 3px #0005}
+@media(max-width:1100px){.bar{grid-template-columns:60px 1fr repeat(3,110px) minmax(220px,1fr) 100px !important}}
+@media(max-width:720px){.bar{grid-template-columns:55px 1fr 104px 104px !important}.theme-button{height:56px}.theme-button .label{display:none}}
+
+html[data-theme="light"]{--fx-bg:#f5f8f6;--fx-panel:#fff;--fx-control:#f0f5f2;--fx-border:#dbe5de;--fx-text:#19251f;--fx-muted:#5a6a60;--fx-cyan:#087b32;--green:#087b32;--green-hover:#066529;--green-soft:#e4f3e9;color-scheme:light}
+html[data-theme="light"] body{background:linear-gradient(135deg,#f7faf8 0%,#eef4f0 100%) !important;color:var(--fx-text) !important}
+html[data-theme="light"] .bar{background:#fff !important;border-top:0 !important;border-bottom:1px solid var(--fx-border) !important;box-shadow:0 12px 34px rgb(12 44 24 / 9%) !important}
+html[data-theme="light"] .home,html[data-theme="light"] .control,html[data-theme="light"] .theme-button{background:var(--fx-control) !important;border-color:var(--fx-border) !important;color:var(--fx-text) !important;box-shadow:none !important}
+html[data-theme="light"] .home{color:var(--green) !important}
+html[data-theme="light"] .home:hover,html[data-theme="light"] .control:hover,html[data-theme="light"] .theme-button:hover{border-color:var(--green) !important}
+html[data-theme="light"] .title{background:var(--green) !important;box-shadow:0 4px 13px rgb(8 123 50 / 25%) !important;color:#fff !important}
+html[data-theme="light"] .key::before{color:var(--green)}
+html[data-theme="light"] .toggle input{background:#dbe5de !important;border-color:#b9c9be !important;box-shadow:none !important}
+html[data-theme="light"] .toggle input::after{background:#fff;box-shadow:0 1px 3px #0004}
+html[data-theme="light"] .toggle input:checked{background:var(--green) !important;border-color:var(--green) !important}
+html[data-theme="light"] .record{background:var(--fx-control) !important}
+html[data-theme="light"] .record.active{background:#fde8ea !important;border-color:#d64557 !important;color:#a31d2e !important}
+html[data-theme="light"] .quick-search{background-color:#fff !important;border-color:var(--fx-border) !important;color:var(--fx-text) !important;box-shadow:0 5px 22px rgb(12 44 24 / 7%) !important;background-image:linear-gradient(45deg,transparent 47%,#5a6a60 48% 53%,transparent 54%),radial-gradient(circle,transparent 42%,#5a6a60 44% 54%,transparent 56%) !important}
+html[data-theme="light"] .quick-search::placeholder{color:var(--fx-muted) !important}
+html[data-theme="light"] .status{background:var(--fx-control) !important;border-color:var(--fx-border) !important;color:var(--fx-muted) !important}
+html[data-theme="light"] .status::before{color:var(--green)}
+html[data-theme="light"] .pad{background:#fff !important;color:var(--fx-text) !important;border:1px solid var(--fx-border) !important;box-shadow:0 5px 22px rgb(12 44 24 / 7%) !important;filter:none !important}
+html[data-theme="light"] .pad:nth-child(6n+2){background:#f3f8f4 !important}
+html[data-theme="light"] .pad:nth-child(6n+3){background:#eef4f0 !important}
+html[data-theme="light"] .pad:nth-child(6n+4){background:#f7faf8 !important}
+html[data-theme="light"] .pad:nth-child(6n+5){background:#f0f5f2 !important}
+html[data-theme="light"] .pad:nth-child(6n){background:#f5f8f6 !important}
+html[data-theme="light"] .pad::before{background:linear-gradient(135deg,rgb(255 255 255 / 70%),transparent 55%)}
+html[data-theme="light"] .pad:hover{outline:1px solid var(--green) !important}
+html[data-theme="light"] .pad.selected{outline:2px solid var(--green) !important;box-shadow:0 0 0 4px rgb(8 123 50 / 12%) !important}
+html[data-theme="light"] .pad.playing{background:var(--green-soft) !important;box-shadow:inset 4px 0 0 var(--green),0 5px 22px rgb(12 44 24 / 7%) !important;filter:none !important}
+html[data-theme="light"] .pos{color:var(--fx-muted) !important;text-shadow:none !important}
+html[data-theme="light"] .name{color:var(--fx-text) !important;text-shadow:none !important}
+html[data-theme="light"] .time{color:var(--fx-muted) !important;text-shadow:none !important}
+html[data-theme="light"] .play-ring{background:conic-gradient(var(--green) calc(var(--progress,0) * 1%),#dbe5de 0) !important}
+html[data-theme="light"] .play{background:var(--green) !important;color:#fff !important}
+html[data-theme="light"] .play:hover{background:var(--green-hover) !important}
+html[data-theme="light"] .pad.playing .play{background:var(--green-hover) !important}
+html[data-theme="light"] .pad-top{color:var(--fx-muted) !important;text-shadow:none !important}
+html[data-theme="light"] .pad-top:hover{color:var(--green) !important}
+html[data-theme="light"] .pad-fixed input{accent-color:var(--green)}
+html[data-theme="light"] .pad.fixed{outline:2px solid #d9a400 !important}
+html[data-theme="light"] .load-more{background:var(--green) !important;border-color:var(--green) !important;color:#fff !important}
+html[data-theme="light"] .load-more::before{color:#fff}
+html[data-theme="light"] .load-more:hover{background:var(--green-hover) !important}
+html[data-theme="light"] .loading{color:var(--fx-muted) !important}
+html[data-theme="light"] .context{background:#fff;border-color:var(--fx-border);box-shadow:0 12px 34px rgb(12 44 24 / 18%)}
+html[data-theme="light"] .context button{background:transparent;color:var(--fx-text)}
+html[data-theme="light"] .context button:hover{background:var(--green-soft);color:var(--green)}
